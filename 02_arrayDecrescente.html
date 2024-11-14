@@ -7,18 +7,18 @@
     */
 
     //ENTRADA
-    const primeiro = parseInt(prompt("Informe um número:"));
-    const segundo = parseInt(prompt("Informe outro número:"));
-    const terceiro = parseInt(prompt("Informe outro número:"));
+    const numero1 = parseInt(prompt("Informe um número:"));
+    const numero2 = parseInt(prompt("Informe outro número:"));
+    const numero3 = parseInt(prompt("Informe outro número:"));
 
     //PROCESSAMENTO
     let array = [];
-    (primeiro > segundo && segundo > terceiro) ? array.push(primeiro, segundo, terceiro) :
-    (primeiro > segundo && terceiro > segundo) ? array.push(primeiro, terceiro, segundo) : 
-    (segundo > primeiro && primeiro > terceiro) ? array.push(segundo, primeiro, terceiro) :
-    (segundo > primeiro && terceiro > primeiro) ? array.push(segundo, primeiro, terceiro) :
-    (terceiro > primeiro && primeiro > segundo) ? array.push(terceiro, primeiro, segundo) :
-    array.push(primeiro, segundo, terceiro);
+    (numero1 > numero2 && numero2 > numero3) ? array.push(numero1, numero2, numero3) :
+    (numero1 > numero2 && numero3 > numero2) ? array.push(numero1, numero3, numero2) : 
+    (numero2 > numero1 && numero1 > numero3) ? array.push(numero2, numero1, numero3) :
+    (numero2 > numero1 && numero3 > numero1) ? array.push(numero2, numero3, numero1) :
+    (numero3 > numero1 && numero1 < numero2) ? array.push(numero3, numero2, numero1) :
+    array.push(numero3, numero1, numero2);
 
     //SAÍDA
     const resultado = array.join(" - ");
