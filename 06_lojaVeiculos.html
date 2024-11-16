@@ -1,0 +1,57 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    PROBLEMA: LOJA DE VEÍCULOS
+    Crie os seguintes arrays:
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+    
+    Peça para o usuário informar mais três veículos para serem inseridos na lista. Para inserir na lista correta, peça também para o usuário identificar o tipo de veículo que deseja inserir, se é SUV, Sedan ou Hatch.
+
+    Apresente a lista final de cada tipo de veículo.
+    */
+
+    // ENTRADA
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+
+    // Primeira inserção
+    let veiculo1 = prompt("Informe o nome do primeiro veículo:");
+    let tipo1 = prompt("Informe o tipo (SUV, Sedan ou Hatch) do primeiro veículo:");
+    if (tipo1 === "SUV") {
+        carrosSUV.push(veiculo1);
+    } else if (tipo1 === "Sedan") {
+        carrosSedan.push(veiculo1);
+    } else if (tipo1 === "Hatch") {
+        carrosHatch.push(veiculo1);
+    }
+
+    // Segunda inserção
+    let veiculo2 = prompt("Informe o nome do segundo veículo:");
+    let tipo2 = prompt("Informe o tipo (SUV, Sedan ou Hatch) do segundo veículo:");
+    if (tipo2 === "SUV") {
+        carrosSUV.push(veiculo2);
+    } else if (tipo2 === "Sedan") {
+        carrosSedan.push(veiculo2);
+    } else if (tipo2 === "Hatch") {
+        carrosHatch.push(veiculo2);
+    }
+
+    // Terceira inserção
+    let veiculo3 = prompt("Informe o nome do terceiro veículo:");
+    let tipo3 = prompt("Informe o tipo (SUV, Sedan ou Hatch) do terceiro veículo:");
+    if (tipo3 === "SUV") {
+        carrosSUV.push(veiculo3);
+    } else if (tipo3 === "Sedan") {
+        carrosSedan.push(veiculo3);
+    } else if (tipo3 === "Hatch") {
+        carrosHatch.push(veiculo3);
+    }
+
+    // SAÍDA
+    document.write("Lista final de SUVs: " + carrosSUV.join(", ") + "<br>");
+    document.write("Lista final de Sedans: " + carrosSedan.join(", ") + "<br>");
+    document.write("Lista final de Hatches: " + carrosHatch.join(", "));
+</script>
