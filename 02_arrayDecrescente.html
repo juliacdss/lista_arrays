@@ -7,21 +7,20 @@
     */
 
     //ENTRADA
-    const numero1 = parseInt(prompt("Informe um número:"));
-    const numero2 = parseInt(prompt("Informe outro número:"));
-    const numero3 = parseInt(prompt("Informe outro número:"));
+    const primeiro = parseInt(prompt(`Informe um número:`));
+    const segundo = parseInt(prompt(`Informe o segundo número:`)); 
+    const terceiro = parseInt(prompt(`Informe o terceiro número:`));
 
     //PROCESSAMENTO
     let array = [];
-    (numero1 > numero2 && numero2 > numero3) ? array.push(numero1, numero2, numero3) :
-    (numero1 > numero2 && numero3 > numero2) ? array.push(numero1, numero3, numero2) : 
-    (numero2 > numero1 && numero1 > numero3) ? array.push(numero2, numero1, numero3) :
-    (numero2 > numero1 && numero3 > numero1) ? array.push(numero2, numero3, numero1) :
-    (numero3 > numero1 && numero1 < numero2) ? array.push(numero3, numero2, numero1) :
-    array.push(numero3, numero1, numero2);
+    (primeiro > segundo && segundo > terceiro) ? array.push(primeiro,segundo,terceiro) :
+    (primeiro > segundo && terceiro > segundo) ? array.push(primeiro,terceiro,segundo) :
+    (segundo > primeiro && primeiro > terceiro) ? array.push(segundo,primeiro,terceiro) :
+    (segundo > terceiro && terceiro > primeiro) ? array.push(segundo,terceiro,primeiro) :
+    (terceiro > primeiro && primeiro > segundo) ? array.push(terceiro,primeiro,segundo) :
+    array.push(terceiro,segundo,primeiro)
 
     //SAÍDA
-    const resultado = array.join(" - ");
-    document.write(`A ordem crescente dos números é: ${resultado}.`);
-
+    const resultado = array.join(' - ');
+    alert(`Os números em ordem crescente são: ${resultado}`);
 </script>

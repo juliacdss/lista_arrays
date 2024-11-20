@@ -17,15 +17,15 @@
     let corInformada = parseInt(prompt("Informe uma cor:"));
 
     //PROCESSAMENTO
-    let numeroAleatorio = Math.floor(Math.random() * 7); // Gera um número entre 0 e 6
+    let numeroAleatorio = Math.floor(Math.random() * 7);
     let corSorteada = nomeCores[numeroAleatorio];
 
     //SAÍDA
-    if (corInformada.toLowerCase() === corSorteada) {
-        document.write(`PARABÉNS! VOCÊ ESTÁ COM SORTE NA COR ${corInformada}!`);
-    } else {
-        document.write("NÃO FOI DESSA VEZ... TENTE NOVAMENTE!");
-    }
+    if (corInformada === nomeCores[numeroAleatorio]) {
+            alert(`PARABÉNS! VOCÊ ESTÁ COM SORTE NA COR ${corInformada}!`);
+        } else {
+            alert("NÃO FOI DESSA VEZ... TENTE NOVAMENTE!");
+        }
 
     /*
     Para gerar números aleatórios, há a função random, da biblioteca Math. Nesse caso, o comando deverá ser o Math.random().
